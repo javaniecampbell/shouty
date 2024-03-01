@@ -1,10 +1,10 @@
 const Person = require('../../src/shouty');
 const { Given, When, Then } = require('@cucumber/cucumber');
-const {assertThat, is} = require('hamjest');
+const { assertThat, is } = require('hamjest');
 
-Given('{person} is located/standing {int} metre(s) from Sean', function (lucy,distance) {
-    this.lucy = new Person();
-    this.sean = new Person();
+Given('{person} is located/standing {int} metre(s) from {person}', function (lucy, distance, sean) {
+    this.lucy = lucy;
+    this.sean = sean;
     this.lucy.moveTo(distance);
 });
 
