@@ -1,4 +1,4 @@
-const Person = require('../../src/shouty');
+const { Person } = require('../../src/shouty');
 const { defineParameterType } = require('@cucumber/cucumber');
 
 defineParameterType({
