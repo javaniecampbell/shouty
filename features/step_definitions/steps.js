@@ -1,6 +1,6 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 
-Given('Lucy is located {int} meters from Sean', function (distance) {
+Given('Lucy is located {int} metres from Sean', function (distance) {
 
     return 'pending';
 });
