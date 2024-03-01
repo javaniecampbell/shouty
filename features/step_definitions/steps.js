@@ -8,8 +8,7 @@ Given('Lucy is located {int} metres from Sean', function (distance) {
 });
 
 When('Sean shouts {string}', function (message) {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
+    this.sean.shout(message);
 });
 
 
