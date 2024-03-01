@@ -3,7 +3,13 @@ class Person {
         this.name = name;
         this.messages = [];
         this.network = network;
+        if (this.network) {
+            this.network.subscribe(this);
+        }
+    }
 
+    joinNetwork(network) {
+        this.network = network;
         this.network.subscribe(this);
     }
 
@@ -12,6 +18,10 @@ class Person {
 
     shout(message) {
         this.network.broadcast(message);
+    }
+
+    hear(message) {
+        this.messages.push(message);
     }
 
     messagesHeard() {
