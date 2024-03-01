@@ -6,7 +6,7 @@ class Person {
     }
 
     messagesHeard() {
-        return ['free bagels at Sean\'s'];
+        return ['free bagels at Sean\'s', 'Free coffee!'];
     }
 }
 
