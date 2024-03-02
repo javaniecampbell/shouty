@@ -5,16 +5,16 @@ Feature: Shout
     To do:
     - only shout to people within a certain distance
 
+    Background: 
+        Given a person named Sean
+        And a person named Lucy
+
     Rule: Shouts can only be heard by others
         Scenario: Listener hears a message
-            Given a person named Lucy
-            And a person named Sean
             When Sean shouts "free bagels at Sean's"
             Then Lucy hears Sean's message
 
         Scenario: Listener hears a different message
-            Given a person named Lucy
-            And a person named Sean
             When Sean shouts "Free coffee!"
             Then Lucy hears Sean's message
 
