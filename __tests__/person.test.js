@@ -28,4 +28,12 @@ describe('Person', () => {
         assert.strictEqual(networkStub.broadcast.getCall(0).args[0], message);
     });
 
+    it('remembers messages heard', () => {
+        const lucy = new Person('Lucy', network);
+        const message = 'Free bagels!';
+        lucy.hear(message);
+
+        assert.deepEqual(lucy.messagesHeard(), [message]);
+    });
+
 });
