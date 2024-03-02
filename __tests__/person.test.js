@@ -20,5 +20,12 @@ describe('Person', () => {
         assert.strictEqual(networkStub.subscribe.getCall(0).args[0], lucy);
     });
 
-    
+    it('broadcsts shouts to the network', () => {
+        const sean = new Person('Sean', network);
+        const message = "Free bagels!";
+        sean.shout(message);
+        assert(networkStub.broadcast.calledOnce);
+        assert.strictEqual(networkStub.broadcast.getCall(0).args[0], message);
+    });
+
 });
