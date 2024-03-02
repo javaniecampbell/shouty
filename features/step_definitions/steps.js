@@ -12,6 +12,16 @@ Given('{person} is located/standing {int} metre(s) from {person}', function (luc
     this.lucy.moveTo(distance);
 });
 
+Given('a person named Lucy', function () {
+    // Write code here that turns the phrase above into concrete actions
+    return 'pending';
+});
+
+Given('a person named Sean', function () {
+    // Write code here that turns the phrase above into concrete actions
+    return 'pending';
+});
+
 When('Sean shouts {string}', function (message) {
     this.sean.shout(message);
     this.messageFromSean = message;
