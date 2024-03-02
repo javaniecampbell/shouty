@@ -13,8 +13,8 @@ class Person {
         this.network.subscribe(this);
     }
 
-    moveTo(distance) {
-    }
+    // moveTo(distance) {
+    // }
 
     shout(message) {
         this.network.broadcast(message);
